@@ -41,7 +41,7 @@ app.use(cors(options));
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 //Use routes
-app.use("/api", cors(),routes);
+app.use("/", cors(),routes);
 
 //Error handling 404
 app.use('/', (req, res, next) => {
