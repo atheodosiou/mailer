@@ -1,5 +1,9 @@
 const sgMail = require("@sendgrid/mail");
 
+const welcome = (req,res,next)=>{
+  res.status(200).json({code:200,message:'Mailer works!'})
+}
+
 const sendMail = (req, res, next) => {
   const message = req.body;
   
@@ -31,4 +35,5 @@ const sendMail = (req, res, next) => {
 
 module.exports = {
   sendMail,
+  welcome
 };
